@@ -58,7 +58,43 @@
           Cesta básicas, cobertas, roupas e colchões.
         </article>
       </section>
-      
+
+      <section id="solicitaco" class="panel form">
+        <h2>🆘 Solicitar ajuda</h2>
+        <p>Preencha seus dados para que possamos entrar em contato.</p>
+
+        <h3>O que você precisa?</h3>
+
+        <label><input type="checkbox" name="ajuda">🏠 Casa danificda</label>
+        <label><input type="checkbox" name="ajuda">🟦 Lona</label>
+        <label><input type="checkbox" name="ajuda">🍚 Alimentos</label>
+        <label><input type="checkbox" name="ajuda">🛏️ Colchão</label>
+        <label><input type="checkbox" name="ajuda">👕 Roupas</label>
+        <label><input type="checkbox" name="ajuda">🧹 Materiais de limpeza</label>
+
+        <h3>👤 dados do solicitante</h3>
+
+        <label for="nome">Nome completo</label>
+        <input id="nome" type="text" placeholder="Seu nome completo">
+
+        <label for="telefone">Telefone / WhatsApp</label>
+        <input id="telefone" type="tel" placeholder="(55) 99999-99999">
+
+        <label for="endereco">Endereço</label>
+        <input id="endereco" type="text" placeholder="Rua, número e bairro">
+
+        <label for="observacao">Conte o que aconteceu</label>
+        <textarea id="observacao"
+          placeholder="Descreva brevemente  situação..."></textarea>
+
+        <small>
+          🔒 Seus dados serão utilizados apenas para contato e encaminhamento de solicitacao.
+        </small>
+
+        <button class="send" onclick="enviarSolicitacao()">
+          Enviar solicitacao
+        </button>
+      </section>
     </main>
-    
+  
   </body>
