@@ -121,3 +121,19 @@ main {
 
   .form label {
     display: block;
+    margin: 9px 0;
+  }
+
+  .form input[type="text"],
+  .form input[type="tel"],
+  .form textarea {
+      width: 100%;
+      padding: 13px;
+      margin: 4px 0 10px;
+      border-radius: 10px;
+      font: inherit;
+  }
+
+  .form textarea {
+    min-height: 100px;
+    resize: ver
