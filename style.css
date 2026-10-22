@@ -1,167 +1,232 @@
 * {
-  box-sizing: border;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
-  --blue: #1769aa;
-  --green: #218739;
-  --red: #c62828;
-  --bg: #f4f6f8;
-  --text: #17202a;
+    --blue: #1769aa;
+    --green: #218739;
+    --red: #c62828;
+    --bg: #f4f6f8;
+    --text: #17202a;
+}
 
 body {
-  font-family: Arial, sans-seriff;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.5;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
 }
 
 header {
-  background: var(--blue);
-  color: white;
-  text-align: center;
-  padding: 22px 16px;
+    background: var(--blue);
+    color: white;
+    text-align: center;
+    padding: 22px 16px;
 }
 
 .logo {
-  font-size: 22px;
-  margin-bottom: 5px;
+    font-size: 22px;
+    margin-bottom: 5px;
 }
- header p {
-   font-size: 14px;
- }
+
+header p {
+    font-size: 14px;
+}
 
 main {
-  max-width: 720px;
-  margin: auto;
-  padding: 16px;
+    max-width: 720px;
+    margin: auto;
+    padding: 16px;
 }
 
 .hero,
 .panel,
 .card {
-  background: white;
-  border-radius: 16;
-  box-shadow: 0 2px 8px #0001;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px #0001;
 }
 
 .hero {
-  padding: 24px;
-  margin-bottom: 16px;
-
-.hero span {
-  color: var(--blue);
-  font-size: 13px;
-  font-weight: bold;
+    padding: 24px;
+    margin-bottom: 16px;
 }
 
-  .hero h1 {
+.hero span {
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero h1 {
     font-size: 28px;
     margin: 7px 0;
-  }
+}
 
-  .actions {
+.actions {
     display: grid;
     gap: 12px;
-  }
+}
 
-  .card {
+.card {
     width: 100%;
     border: 0;
     padding: 20px;
     text-align: left;
     cursor: pointer;
-  }
+    font: inherit;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
 
-  .card small {
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px #0002;
+}
+
+.card b,
+.card small {
+    display: block;
+}
+
+.card small {
     color: #555;
-  }
+    margin-top: 4px;
+}
 
-  .danger { border-left: 6px  solid var(--red); }
-  .sucess { border-left: 6px solid var(--green); }
-  .info { border-left: 6px solid var(--blue); }
+.danger {
+    border-left: 6px solid var(--red);
+}
 
-  .emergency {
+.sucess {
+    border-left: 6px solid var(--green);
+}
+
+.info {
+    border-left: 6px solid var(--blue);
+}
+
+.emergency {
     margin: 18px 0;
     padding: 20px;
     background: #fff3f3;
     border: 2px solid #e57373;
     border-radius: 16px;
-  }
+}
 
-  .emergency a {
+.emergency h2 {
+    margin-bottom: 5px;
+}
+
+.emergency a {
     display: inline-block;
     margin: 10px 5px 0 0;
     padding: 10px 14px;
-    background: var(--red)
+    background: var(--red);
     color: white;
     border-radius: 9px;
-    text-decorition: none;
+    text-decoration: none;
     font-weight: bold;
+}
 
-  .panel {
+.emergency a:hover {
+    background: #a51d1d;
+}
+
+.panel {
     padding: 20px;
     margin-bottom: 18px;
-  }
+}
 
-  .panel h2 {
+.panel h2 {
     margin-bottom: 10px;
-  }
+}
 
-  .panel h3 {
+.panel h3 {
     margin: 20px 0 10px;
-  }
+}
 
-  article {
+article {
     padding: 14px 0;
     border-bottom: 1px solid #ddd;
-  }
+}
 
-  .form label {
+article:last-child {
+    border-bottom: none;
+}
+
+.form label {
     display: block;
     margin: 9px 0;
-  }
+}
 
-  .form input[type="text"],
-  .form input[type="tel"],
-  .form textarea {
-      width: 100%;
-      padding: 13px;
-      margin: 4px 0 10px;
-      border-radius: 10px;
-      font: inherit;
-  }
+.form input[type="checkbox"] {
+    margin-right: 7px;
+}
 
-  .form textarea {
+.form input[type="text"],
+.form input[type="tel"],
+.form textarea {
+    width: 100%;
+    padding: 13px;
+    margin: 4px 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font: inherit;
+}
+
+.form input:focus,
+.form textarea:focus {
+    outline: 2px solid var(--blue);
+    border-color: var(--blue);
+}
+
+.form textarea {
     min-height: 100px;
     resize: vertical;
-  }
+}
 
-  .form small {
+.form small {
     display: block;
     color: #667;
     margin-top: 8px;
-  }
+}
 
-  .send {
+.send {
     width: 100%;
     padding: 15px;
     margin-top: 16px;
     border: 0;
-    border: 0;
     border-radius: 10px;
-    background: var(---green);
+    background: var(--green);
     color: white;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-  }
+}
 
-  footer {
+.send:hover {
+    background: #176b2b;
+}
+
+footer {
     text-align: center;
     padding: 28px 16px;
     color: #667;
     font-size: 13px;
-  }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 23px;
+    }
+    .hero,
+    .panel {
+        padding: 18px;
+    }
+    .emergency a {
+        margin-right: 3px;
+        padding: 9px 10px;
+    }
+}
