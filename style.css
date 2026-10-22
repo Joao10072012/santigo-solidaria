@@ -136,4 +136,32 @@ main {
 
   .form textarea {
     min-height: 100px;
-    resize: ver
+    resize: vertical;
+  }
+
+  .form small {
+    display: block;
+    color: #667;
+    margin-top: 8px;
+  }
+
+  .send {
+    width: 100%;
+    padding: 15px;
+    margin-top: 16px;
+    border: 0;
+    border: 0;
+    border-radius: 10px;
+    background: var(---green);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  footer {
+    text-align: center;
+    padding: 28px 16px;
+    color: #667;
+    font-size: 13px;
+  }
